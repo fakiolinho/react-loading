@@ -1,0 +1,40 @@
+{
+  "name": "react-loading",
+  "version": "0.0.1",
+  "description": "React loading component",
+  "main": "lib/react-loading.js",
+  "scripts": {
+    "test": "script/test --browsers Firefox --single-run",
+    "start": "script/build"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cezary/react-loading.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "loading"
+  ],
+  "author": "Cezary Wojtkowski <cezary@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cezary/react-loading/issues"
+  },
+  "homepage": "https://github.com/cezary/react-loading",
+  "peerDependencies": {
+    "react": "^0.12.1"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "reactify": "^0.17.1",
+    "uglify-js": "^2.4.15",
+    "webpack": "^1.4.13",
+    "webpack-dev-server": "^1.6.6"
+  }
+}

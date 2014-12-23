@@ -1,0 +1,8 @@
+#!/bin/sh
+webpack --devtool source-map
+
+node_modules/.bin/uglifyjs dist/react-loading.js \
+  --output dist/react-loading.min.js \
+  --source-map dist/react-loading.min.map \
+  --source-map-url react-loading.min.map \
+  --compress warnings=false
