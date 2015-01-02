@@ -1,6 +1,6 @@
 {
   "name": "react-loading",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React loading component",
   "main": "lib/react-loading.js",
   "scripts": {
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "jsx-loader": "^0.12.2",
+    "raw-loader": "^0.5.1",
     "reactify": "^0.17.1",
     "uglify-js": "^2.4.15",
     "webpack": "^1.4.13",

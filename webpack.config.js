@@ -12,7 +12,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, loader: 'jsx-loader'}
+      {test: /\.js$/, loader: 'jsx-loader'},
+      {test: /\.svg$/, loader: 'raw-loader'}
     ]
   }
 };
