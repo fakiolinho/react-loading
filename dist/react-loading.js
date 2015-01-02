@@ -108,7 +108,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	
 	    return (
-	      React.createElement("div", {style: svgStyle, dangerouslySetInnerHTML: {__html:svg}})
+	      React.createElement("img", {style: svgStyle, src: "data:image/svg+xml;utf8,"+svg})
 	    );
 	  }
 	});

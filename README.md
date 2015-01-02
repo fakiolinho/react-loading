@@ -1,5 +1,6 @@
 # react-loading
 
+Easy to use loading animations for React projects. Uses SVG animations from Brent Jackson's [loading](https://github.com/jxnblk/loading) project.
 
 ## Installation
 
