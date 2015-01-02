@@ -9,7 +9,7 @@ npm install react-loading
 
 ## Demo
 
-http://cezary.github.io/react-loading/example/
+http://cezary.github.io/react-loading/
 
 ## Example
 
