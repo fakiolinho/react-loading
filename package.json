@@ -2,7 +2,7 @@
   "name": "react-loading",
   "version": "0.0.2",
   "description": "React loading component",
-  "main": "lib/react-loading.js",
+  "main": "dist/react-loading.js",
   "scripts": {
     "test": "script/test --browsers Firefox --single-run",
     "start": "script/build"
