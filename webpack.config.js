@@ -6,10 +6,6 @@ module.exports = {
     library: 'Loading',
     libraryTarget: 'umd'
   },
-  externals: {
-    'react': 'React',
-    'react/addons': 'React'
-  },
   module: {
     loaders: [
       {test: /\.js$/, loader: 'jsx-loader'},
