@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './index.js',
+  entry: './lib/react-loading.js',
   output: {
     filename: './dist/react-loading.js',
     sourceMapFilename: './dist/react-loading.map',
