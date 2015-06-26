@@ -84,15 +84,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Loading() {
 	    _classCallCheck(this, Loading);
 
-	    _get(Object.getPrototypeOf(Loading.prototype), 'constructor', this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(Loading.prototype), 'constructor', this).call(this);
+	    this.state = {
+	      delayed: false
+	    };
 	  }
 
 	  _inherits(Loading, _Component);
 
 	  _createClass(Loading, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      var _this = this;
+
+	      var delayed = this.props.delay > 0;
+
+	      if (delayed) {
+	        this.setState({ delayed: true });
+	        setTimeout(function () {
+	          _this.setState({ delayed: false });
+	        }, this.props.delay);
+	      }
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var svg = svgSources[this.props.type];
+	      var type = this.state.delayed ? 'blank' : this.props.type;
+	      var svg = svgSources[type];
 	      var svgStyle = {
 	        fill: this.props.color,
 	        height: this.props.height,
@@ -110,12 +128,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	Loading.propTypes = {
 	  color: _react.PropTypes.string,
+	  delay: _react.PropTypes.number,
 	  height: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
 	  type: _react.PropTypes.string,
 	  width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string])
 	};
 	Loading.defaultProps = {
 	  color: '#fff',
+	  delay: 1000,
 	  height: 64,
 	  type: 'balls',
 	  width: 64
@@ -139,6 +159,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
+
+	var _blankSvg = __webpack_require__(11);
+
+	exports.blank = _interopRequire(_blankSvg);
 
 	var _loadingBallsSvg = __webpack_require__(4);
 
@@ -219,6 +243,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = "<svg id=\"loading\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(0 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0\"/>\n  </path>\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(45 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0.125s\"/>\n  </path>\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(90 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0.25s\"/>\n  </path>\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(135 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0.375s\"/>\n  </path>\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(180 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0.5s\"/>\n  </path>\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(225 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0.675s\"/>\n  </path>\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(270 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0.75s\"/>\n  </path>\n  <path opacity=\".1\" d=\"M14 0 H18 V8 H14 z\" transform=\"rotate(315 16 16)\">\n    <animate attributeName=\"opacity\" from=\"1\" to=\".1\" dur=\"1s\" repeatCount=\"indefinite\" begin=\"0.875s\"/>\n  </path>\n</svg>\n"
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	module.exports = "<svg class=\"icon-blank\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"></svg>\n"
 
 /***/ }
 /******/ ])
