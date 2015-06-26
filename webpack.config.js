@@ -3,12 +3,20 @@ module.exports = {
   output: {
     filename: './dist/react-loading.js',
     sourceMapFilename: './dist/react-loading.map',
-    library: 'Loading',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    library: 'Loading'
   },
+  externals: [{
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    }
+  }],
   module: {
     loaders: [
-      {test: /\.js$/, loader: 'jsx-loader'},
+      {test: /\.js$/, loader: 'babel-loader'},
       {test: /\.svg$/, loader: 'raw-loader'}
     ]
   }
