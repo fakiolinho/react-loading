@@ -116,13 +116,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function render() {
 	      var type = this.state.delayed ? 'blank' : this.props.type;
 	      var svg = svgSources[type];
-	      var svgStyle = {
+	      var style = {
 	        fill: this.props.color,
 	        height: this.props.height,
 	        width: this.props.width
 	      };
 
-	      return _react2['default'].createElement('img', { style: svgStyle, src: "data:image/svg+xml;utf8," + svg });
+	      return _react2['default'].createElement('div', {
+	        style: style,
+	        dangerouslySetInnerHTML: { __html: svg }
+	      });
 	    }
 	  }]);
 
