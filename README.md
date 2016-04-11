@@ -12,6 +12,18 @@ npm install react-loading
 
 http://cezary.github.io/react-loading/
 
+## Loading Types
+
+* blank
+* balls
+* bars
+* bubbles
+* cubes
+* cylon
+* spin
+* spinningBubbles
+* spokes
+
 ## Example
 
 ```javascript
