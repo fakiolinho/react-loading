@@ -93,8 +93,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  _createClass(Loading, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
 	      var _this = this;
 
 	      var delayed = this.props.delay > 0;
