@@ -121,10 +121,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        height: this.props.height,
 	        width: this.props.width
 	      };
+	      var className = this.props.className;
 
 	      return _react2['default'].createElement('div', {
 	        style: style,
-	        dangerouslySetInnerHTML: { __html: svg }
+	        dangerouslySetInnerHTML: { __html: svg },
+	        className: className
 	      });
 	    }
 	  }]);
@@ -139,14 +141,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  delay: _react.PropTypes.number,
 	  height: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
 	  type: _react.PropTypes.string,
-	  width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string])
+	  width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
+	  className: _react.PropTypes.string
 	};
 	Loading.defaultProps = {
 	  color: '#fff',
 	  delay: 1000,
 	  height: 64,
 	  type: 'balls',
-	  width: 64
+	  width: 64,
+	  className: ''
 	};
 	module.exports = exports['default'];
 
