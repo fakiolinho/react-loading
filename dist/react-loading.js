@@ -121,8 +121,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        height: this.props.height,
 	        width: this.props.width
 	      };
+	      var className = this.props.className;
 
 	      return _react2['default'].createElement('div', {
+	        className: className,
 	        style: style,
 	        dangerouslySetInnerHTML: { __html: svg }
 	      });
@@ -139,7 +141,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  delay: _react.PropTypes.number,
 	  height: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
 	  type: _react.PropTypes.string,
-	  width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string])
+	  width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
+	  className: _react.PropTypes.string
 	};
 	Loading.defaultProps = {
 	  color: '#fff',
