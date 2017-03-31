@@ -33,7 +33,7 @@ var Loading = require('react-loading');
 var Component = React.createClass({
   render: function() {
     return (
-      <Loading type='balls' color='#e3e3e3' />
+      <Loading type='balls' color='#e3e3e3' height='667' width='375'/>
     );
   }
 });
