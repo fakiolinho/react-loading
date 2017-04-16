@@ -29,5 +29,8 @@
     "node-libs-browser": "^0.5.2",
     "raw-loader": "^0.5.1",
     "webpack": "^1.9.12"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.8"
   }
 }
