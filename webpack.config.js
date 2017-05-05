@@ -1,23 +1,24 @@
+const { resolve } = require('path');
+
 module.exports = {
-  entry: './lib/react-loading.js',
+  entry: './lib/react-loading.jsx',
   output: {
-    filename: './dist/react-loading.js',
-    sourceMapFilename: './dist/react-loading.map',
-    libraryTarget: 'umd',
-    library: 'Loading'
+    filename: 'react-loading.js',
+    path: resolve(__dirname, './dist'),
+    publicPath: '/',
   },
-  externals: [{
-    react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react'
-    }
-  }],
+  devtool: 'inline-source-map',
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.json'],
+  },
   module: {
-    loaders: [
-      {test: /\.js$/, loader: 'babel-loader'},
-      {test: /\.svg$/, loader: 'raw-loader'}
-    ]
-  }
+    rules: [{
+      test: /\.jsx?$/,
+      use: 'babel-loader',
+      exclude: /node_modules/,
+    }, {
+      test: /\.svg$/,
+      use: 'raw-loader'
+    }],
+  },
 };

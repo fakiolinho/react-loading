@@ -1,1 +1,10 @@
+.npmignore
+.gitignore
+.babelrc
+.travis.yml
+__tests__/
+coverage/
+.idea/
+.jshintignore
+.jshintrc
 webpack.config.js
