@@ -29,16 +29,14 @@ http://cezary.github.io/react-loading/
 ## Example
 
 ```javascript
-var React = require('react');
-var Loading = require('react-loading');
+import React from 'react';
+import Loading from 'react-loading';
 
-var Component = React.createClass({
-  render: function() {
-    return (
-      <Loading type='balls' color='#e3e3e3' />
-    );
-  }
-});
+const Component = (props) => (
+	<Loading type={type} color='#e3e3e3' />
+);
+
+export default Component;
 ```
 
 ## License

@@ -7,6 +7,7 @@
     "build": "rimraf dist && mkdir dist && webpack -p",
     "prepublish": "npm run build",
     "start": "webpack",
+    "pretest": "npm run lint",
     "test": "jest",
     "lint": "eslint ./lib/**.jsx --color",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -71,6 +72,7 @@
       "\\.svg$": "identity-obj-proxy"
     },
     "verbose": true,
-    "collectCoverage": true
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": ["<rootDir>/lib/svg/", "<rootDir>/node_modules/"]
   }
 }
