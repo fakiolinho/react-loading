@@ -32,11 +32,11 @@ http://cezary.github.io/react-loading/
 import React from 'react';
 import Loading from 'react-loading';
 
-const Component = (props) => (
-	<Loading type={type} color='#e3e3e3' />
+const LoadingComponent = ({ color }) => (
+	<Loading type="spin" color={color} />
 );
 
-export default Component;
+export default LoadingComponent;
 ```
 
 ## License
