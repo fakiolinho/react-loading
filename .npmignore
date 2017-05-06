@@ -1,6 +1,8 @@
-.npmignore
-.gitignore
 .babelrc
+.editorconfig
+.eslintrc
+.gitignore
+.npmignore
 .travis.yml
 __tests__/
 coverage/

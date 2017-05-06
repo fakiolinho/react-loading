@@ -4,15 +4,16 @@
   "description": "React loading component",
   "main": "dist/react-loading.js",
   "scripts": {
-    "build": "rimraf dist && mkdir dist && webpack -p",
+    "build": "rimraf dist && mkdir dist && webpack",
     "prepublish": "npm run build",
-    "start": "webpack",
+    "start": "webpack -w",
     "pretest": "npm run lint",
     "test": "jest",
     "lint": "eslint ./lib/**.jsx --color",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "travis": "npm run build && npm test && npm run coveralls",
-    "clean": "npm prune && npm i"
+    "clean": "npm prune && npm i",
+    "release": "np"
   },
   "repository": {
     "type": "git",
@@ -73,6 +74,9 @@
     },
     "verbose": true,
     "collectCoverage": true,
-    "coveragePathIgnorePatterns": ["<rootDir>/lib/svg/", "<rootDir>/node_modules/"]
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/lib/svg/",
+      "<rootDir>/node_modules/"
+    ]
   }
 }

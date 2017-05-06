@@ -6,6 +6,8 @@ module.exports = {
     filename: 'react-loading.js',
     path: resolve(__dirname, './dist'),
     publicPath: '/',
+    libraryTarget: 'umd',
+    library: 'Loading',
   },
   devtool: 'inline-source-map',
   resolve: {
@@ -18,7 +20,7 @@ module.exports = {
       exclude: /node_modules/,
     }, {
       test: /\.svg$/,
-      use: 'raw-loader'
+      use: 'raw-loader',
     }],
   },
 };
