@@ -1,33 +1,82 @@
 {
   "name": "react-loading",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "React loading component",
   "main": "dist/react-loading.js",
   "scripts": {
-    "start": "webpack"
+    "build": "rimraf dist && mkdir dist && webpack",
+    "prepublish": "npm run build",
+    "start": "webpack -w",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "lint": "eslint ./lib/**.jsx --color",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "travis": "npm run build && npm test && npm run coveralls",
+    "clean": "npm prune && npm i",
+    "release": "np"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cezary/react-loading.git"
+    "url": "https://github.com/fakiolinho/react-loading.git"
   },
   "keywords": [
     "loading",
     "react",
     "react-component"
   ],
-  "author": "Cezary Wojtkowski <cezary@gmail.com>",
+  "author": {
+    "name": "Fakiolas Marios",
+    "email": "m.fakiolas@hotmail.gr",
+    "url": "https://about.me/marios.fakiolas"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cezary/react-loading/issues"
+    "url": "https://github.com/fakiolinho/react-loading/issues"
   },
-  "homepage": "https://github.com/cezary/react-loading",
+  "homepage": "https://github.com/fakiolinho/react-loading",
   "peerDependencies": {
-    "react": ">= 0.13.0"
+    "react": ">=0.14.0",
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
-    "babel-loader": "^5.2.2",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "coveralls": "^2.13.1",
+    "enzyme": "^2.8.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^19.0.2",
     "node-libs-browser": "^0.5.2",
+    "np": "^2.14.1",
+    "prop-types": "^15.5.8",
     "raw-loader": "^0.5.1",
-    "webpack": "^1.9.12"
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0",
+    "react-test-renderer": "^15.5.4",
+    "rimraf": "^2.6.1",
+    "webpack": "^2.5.0"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.svg$": "identity-obj-proxy"
+    },
+    "verbose": true,
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/lib/svg/",
+      "<rootDir>/node_modules/"
+    ]
   }
 }
