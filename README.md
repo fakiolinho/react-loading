@@ -12,7 +12,7 @@ npm install react-loading
 
 ## Demo
 
-http://cezary.github.io/react-loading/
+Check [here](https://www.webpackbin.com/bins/-KmrzFstbIElhoFgQX96)
 
 ## Loading Types
 
@@ -30,13 +30,13 @@ http://cezary.github.io/react-loading/
 
 ```javascript
 import React from 'react';
-import Loading from 'react-loading';
+import ReactLoading from 'react-loading';
 
-const LoadingComponent = ({ type, color }) => (
-	<Loading type={type} color={color} height='667' width='375' />
+const Example = ({ type, color }) => (
+	<ReactLoading type={type} color={color} height='667' width='375' />
 );
 
-export default LoadingComponent;
+export default Example;
 ```
 
 ## License
