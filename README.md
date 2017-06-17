@@ -39,6 +39,18 @@ const Example = ({ type, color }) => (
 export default Example;
 ```
 
+### Props
+
+| Name | Type | Default Value |
+|:------:|:------:|:---------------:|
+| type | String | balls |
+| color | String | `#ffffff` |
+| delay | Number | 1000 (msecs) |
+| height | Number or String | 64 (px) |
+| width | Number or String | 64 (px) |
+| className | String | `''` |
+
+
 ## License
 
 MIT
