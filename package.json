@@ -1,12 +1,13 @@
 {
   "name": "react-loading",
-  "version": "0.2.6",
+  "version": "0.2.5",
   "description": "React loading component",
   "main": "dist/react-loading.js",
   "scripts": {
     "build": "rimraf dist && mkdir dist && webpack",
     "prepublish": "npm run build",
     "start": "webpack -w",
+    "pretest": "npm run lint",
     "test": "jest",
     "lint": "eslint ./lib/**.jsx --color",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -44,7 +45,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "coveralls": "^3.0.0",
+    "coveralls": "^2.12.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
     "eslint": "^4.9.0",
