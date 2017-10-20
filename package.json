@@ -5,7 +5,7 @@
   "main": "dist/react-loading.js",
   "scripts": {
     "build": "rimraf dist && mkdir dist && webpack",
-    "prepublish": "yarn run build",
+    "prepare": "yarn run build",
     "start": "webpack -w",
     "pretest": "yarn run lint",
     "test": "jest",
