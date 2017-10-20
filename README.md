@@ -7,7 +7,12 @@ Easy to use loading animations for React projects. Uses SVG animations from Bren
 ## Installation
 
 ```
-npm install react-loading
+npm i react-loading
+```
+or
+
+```
+yarn add react-loading
 ```
 
 ## Demo

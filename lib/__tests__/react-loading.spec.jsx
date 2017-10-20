@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import Loading from '../react-loading';
 
@@ -24,10 +24,22 @@ describe('test Loading component', () => {
     expect(enzymeWrapper.state('delayed')).toEqual(false);
   });
 
-  it('delayed key in state should become true and and then false after delay time has passed', () => {
-    const enzymeWrapper = shallow(<Loading delay={2000} />);
+  it('delayed in state should be truthy when props delay is bigger than 0', () => {
+    const enzymeWrapper = shallow(<Loading />);
 
     expect(enzymeWrapper.state('delayed')).toEqual(true);
+  });
+
+  it('delayed key in state should remain truthy till delay time has passed', () => {
+    const enzymeWrapper = shallow(<Loading delay={2000} />);
+
+    jest.runTimersToTime(1000);
+
+    expect(enzymeWrapper.state('delayed')).toEqual(true);
+  });
+
+  it('delayed key in state should become true and and then false after delay time has passed', () => {
+    const enzymeWrapper = shallow(<Loading delay={2000} />);
 
     jest.runTimersToTime(2000);
 

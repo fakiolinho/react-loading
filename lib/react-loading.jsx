@@ -29,17 +29,18 @@ export default class Loading extends Component {
   };
 
   state = {
-    delayed: false,
+    delayed: this.props.delay > 0,
   };
 
-  componentWillMount() {
+  componentDidMount() {
     const { delay } = this.props;
-    const delayed = delay > 0;
+    const { delayed } = this.state;
 
     if (delayed) {
-      this.setState({ delayed: true });
       this.timeout = setTimeout(() => {
-        this.setState({ delayed: false });
+        this.setState({
+          delayed: false,
+        });
       }, delay);
     }
   }
@@ -53,7 +54,9 @@ export default class Loading extends Component {
   }
 
   render() {
-    const { color, delay, type, height, width, className, ...restProps } = this.props;
+    const {
+      color, type, height, width, className, ...restProps
+    } = this.props;
     const selectedType = this.state.delayed ? 'blank' : type;
     const svg = svgSources[selectedType];
     const style = {
