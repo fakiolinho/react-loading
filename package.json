@@ -4,7 +4,6 @@
   "description": "React loading component",
   "main": "dist/react-loading.js",
   "scripts": {
-    "prepush": "yarn test",
     "build": "rimraf dist && mkdir dist && webpack",
     "prepublish": "yarn run build",
     "start": "webpack -w",
