@@ -5,13 +5,13 @@
   "main": "dist/react-loading.js",
   "scripts": {
     "build": "rimraf dist && mkdir dist && webpack",
-    "prepare": "yarn run build",
+    "prepublish": "npm run build",
     "start": "webpack -w",
-    "pretest": "yarn run lint",
+    "pretest": "npm run lint",
     "test": "jest",
     "lint": "eslint ./lib/**.jsx --color",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "travis": "yarn run build && yarn test && yarn run coveralls",
+    "travis": "npm run build && npm test && npm run coveralls",
     "release": "np"
   },
   "repository": {
