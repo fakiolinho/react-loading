@@ -7,25 +7,23 @@ export default class Loading extends Component {
   static propTypes = {
     color: PropTypes.string,
     delay: PropTypes.number,
+    type: PropTypes.string,
     height: PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.string,
     ]),
-    type: PropTypes.string,
     width: PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.string,
     ]),
-    className: PropTypes.string,
   };
 
   static defaultProps = {
     color: '#fff',
     delay: 1000,
-    height: 64,
     type: 'balls',
+    height: 64,
     width: 64,
-    className: '',
   };
 
   state = {
@@ -55,7 +53,7 @@ export default class Loading extends Component {
 
   render() {
     const {
-      color, type, height, width, className, ...restProps
+      color, delay, type, height, width, ...restProps
     } = this.props;
     const selectedType = this.state.delayed ? 'blank' : type;
     const svg = svgSources[selectedType];
@@ -69,7 +67,6 @@ export default class Loading extends Component {
       <div
         style={style}
         dangerouslySetInnerHTML={{ __html: svg }}
-        className={className}
         {...restProps}
       />
     );
