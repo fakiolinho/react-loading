@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-declare class Loading extends React.Component<LoadingProps, LoadingState> { 
+export default class Loading extends React.Component<LoadingProps, LoadingState> { 
 }
 
 declare interface LoadingProps {
@@ -15,4 +15,3 @@ declare interface LoadingState{
     delayed : boolean;
 }
 
-export = Loading;
