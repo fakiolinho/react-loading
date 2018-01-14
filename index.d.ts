@@ -9,6 +9,7 @@ declare interface LoadingProps {
     width? : any;
     delay?: number;
     type? : string;
+    className?: string;
 }
 
 declare interface LoadingState{
