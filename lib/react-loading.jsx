@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import * as svgSources from './svg';
+import * as svgSources from './svg/index.js';
 
 export default class Loading extends Component {
   static propTypes = {
