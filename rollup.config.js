@@ -1,6 +1,7 @@
 // rollup.config.js
 import babel from 'rollup-plugin-babel';
 import stringPlugin from 'rollup-plugin-string';
+import resolve from 'rollup-plugin-node-resolve';
 
 const babelOptions = (production) => {
   const result = {
@@ -23,5 +24,10 @@ export default {
   plugins: [
     stringPlugin({ include: '**/*.svg' }),
     babel(babelOptions(false)),
+    resolve({ extensions: ['.js', '.svg'] }),
   ],
+  external: Object.keys({
+    'prop-types': 'PropTypes',
+    react: 'React',
+  }),
 };
