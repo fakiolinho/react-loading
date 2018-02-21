@@ -17,7 +17,7 @@ yarn add react-loading
 
 ## Demo
 
-Check [here](https://www.webpackbin.com/bins/-KmrzFstbIElhoFgQX96)
+Check [here](https://codesandbox.io/s/mqx0ql55qp)
 
 ## Loading Types
 
