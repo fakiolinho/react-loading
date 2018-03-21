@@ -9,6 +9,7 @@ module.exports = {
     libraryTarget: 'umd',
     library: 'Loading',
   },
+  node: false,
   devtool: 'inline-source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json'],
