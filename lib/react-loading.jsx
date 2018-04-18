@@ -8,14 +8,8 @@ export default class Loading extends Component {
     color: PropTypes.string,
     delay: PropTypes.number,
     type: PropTypes.string,
-    height: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
-    ]),
-    width: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
-    ]),
+    height: PropTypes.number,
+    width: PropTypes.number,
   };
 
   static defaultProps = {
@@ -53,7 +47,7 @@ export default class Loading extends Component {
 
   render() {
     const {
-      color, delay, type, height, width, ...restProps
+      color, type, height, width, ...restProps
     } = this.props;
     const selectedType = this.state.delayed ? 'blank' : type;
     const svg = svgSources[selectedType];

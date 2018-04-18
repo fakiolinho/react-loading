@@ -38,7 +38,7 @@ import React from 'react';
 import ReactLoading from 'react-loading';
 
 const Example = ({ type, color }) => (
-	<ReactLoading type={type} color={color} height='667' width='375' />
+	<ReactLoading type={type} color={color} height={667} width={375} />
 );
 
 export default Example;
@@ -51,8 +51,8 @@ export default Example;
 | type | String | balls |
 | color | String | `#ffffff` |
 | delay | Number | 1000 (msecs) |
-| height | Number or String | 64 (px) |
-| width | Number or String | 64 (px) |
+| height | Number | 64 (px) |
+| width | Number | 64 (px) |
 | className | String | `''` |
 
 
