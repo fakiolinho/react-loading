@@ -14,7 +14,7 @@ export default class Loading extends Component {
 
   static defaultProps = {
     color: '#fff',
-    delay: 1000,
+    delay: 0,
     type: 'balls',
     height: 64,
     width: 64,

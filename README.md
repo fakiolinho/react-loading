@@ -50,7 +50,7 @@ export default Example;
 |:------:|:------:|:---------------:|
 | type | String | balls |
 | color | String | `#ffffff` |
-| delay | Number | 1000 (msecs) |
+| delay | Number | 0 (msecs) |
 | height | Number | 64 (px) |
 | width | Number | 64 (px) |
 | className | String | `''` |

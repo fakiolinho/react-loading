@@ -19,13 +19,13 @@ describe('test Loading component', () => {
   });
 
   it('delayed key in state should be equal to false if prop delay is 0', () => {
-    const enzymeWrapper = shallow(<Loading delay={0} />);
+    const enzymeWrapper = shallow(<Loading />);
 
     expect(enzymeWrapper.state('delayed')).toEqual(false);
   });
 
   it('delayed in state should be truthy when props delay is bigger than 0', () => {
-    const enzymeWrapper = shallow(<Loading />);
+    const enzymeWrapper = shallow(<Loading delay={100} />);
 
     expect(enzymeWrapper.state('delayed')).toEqual(true);
   });
