@@ -4,6 +4,7 @@
   "description": "React loading component",
   "main": "dist/react-loading.js",
   "scripts": {
+    "prepush": "yarn test",
     "build": "rimraf dist && mkdir dist && webpack",
     "prepublish": "npm run build",
     "start": "webpack -w",
@@ -11,7 +12,7 @@
     "test": "jest",
     "lint": "eslint ./lib/**.jsx --color",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "travis": "npm run build && npm test",
+    "travis": "npm run build && npm test && npm run coveralls",
     "release": "np"
   },
   "repository": {
