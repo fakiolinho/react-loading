@@ -47,7 +47,7 @@ export default class Loading extends Component {
 
   render() {
     const {
-      color, type, height, width, ...restProps
+      color, delay, type, height, width, ...restProps
     } = this.props;
     const selectedType = this.state.delayed ? 'blank' : type;
     const svg = svgSources[selectedType];
