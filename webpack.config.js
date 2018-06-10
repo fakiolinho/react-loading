@@ -10,7 +10,7 @@ module.exports = {
     library: 'Loading',
   },
   node: false,
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json'],
   },
