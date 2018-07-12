@@ -51,4 +51,12 @@ describe('test Loading component', () => {
 
     expect(enzymeWrapper.instance().timeout).not.toEqual(undefined);
   });
+
+  it('allows setting height and width with strings without propTypes warnings', () => {
+    const spyConsoleError = jest.spyOn(global.console, 'error');
+    const enzymeWrapper = shallow(<Loading height="20%" width="20%" />);
+    expect(enzymeWrapper).toHaveLength(1);
+    expect(spyConsoleError).not.toHaveBeenCalled();
+    spyConsoleError.mockRestore();
+  });
 });

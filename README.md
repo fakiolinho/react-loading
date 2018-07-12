@@ -31,7 +31,7 @@ Check [here](https://codesandbox.io/s/mqx0ql55qp)
 * spinningBubbles
 * spokes
 
-## Example
+## Examples
 
 ```javascript
 import React from 'react';
@@ -44,6 +44,17 @@ const Example = ({ type, color }) => (
 export default Example;
 ```
 
+```javascript
+import React from 'react';
+import ReactLoading from 'react-loading';
+
+const Example = ({ type, color }) => (
+	<ReactLoading type={type} color={color} height={'20%'} width={'20%'} />
+);
+
+export default Example;
+```
+
 ### Props
 
 | Name | Type | Default Value |
@@ -51,8 +62,8 @@ export default Example;
 | type | String | balls |
 | color | String | `#ffffff` |
 | delay | Number | 0 (msecs) |
-| height | Number | 64 (px) |
-| width | Number | 64 (px) |
+| height | Number or String | 64 (px) |
+| width | Number or String | 64 (px) |
 | className | String | `''` |
 
 
