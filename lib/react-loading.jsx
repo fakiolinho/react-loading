@@ -53,19 +53,19 @@ export default class Loading extends Component {
 
   render() {
     const {
-      color, delay, type, height, width, ...restProps
+      color, delay, type, height, width, style, ...restProps
     } = this.props;
     const selectedType = this.state.delayed ? 'blank' : type;
     const svg = svgSources[selectedType];
-    const style = {
-      fill: color,
-      height,
-      width,
-    };
 
     return (
       <div
-        style={style}
+        style={{
+          fill: color,
+          height,
+          width,
+          ...style,
+        }}
         dangerouslySetInnerHTML={{ __html: svg }}
         {...restProps}
       />
