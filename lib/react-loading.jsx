@@ -16,6 +16,7 @@ export default class Loading extends Component {
       PropTypes.string,
       PropTypes.number,
     ]),
+    // eslint-disable-next-line forbid-prop-types
     style: PropTypes.object,
   };
 
