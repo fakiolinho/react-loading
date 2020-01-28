@@ -16,6 +16,7 @@ export default class Loading extends Component {
       PropTypes.string,
       PropTypes.number,
     ]),
+    style: PropTypes.object,
   };
 
   static defaultProps = {
@@ -24,6 +25,7 @@ export default class Loading extends Component {
     type: 'balls',
     height: 64,
     width: 64,
+    style: {},
   };
 
   state = {
