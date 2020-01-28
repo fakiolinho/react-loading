@@ -16,8 +16,7 @@ export default class Loading extends Component {
       PropTypes.string,
       PropTypes.number,
     ]),
-    // eslint-disable-next-line react/forbid-prop-types
-    style: PropTypes.object,
+    style: PropTypes.shape(),
   };
 
   static defaultProps = {
