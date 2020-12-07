@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 import * as svgSources from './svg';
 
+// format if width and height to number or css value
+// default value as defaultProps.(width|height)
+function formatStyleProp(style) {
+  return Number(style) || style;
+}
+
 export default class Loading extends Component {
   static propTypes = {
     color: PropTypes.string,
@@ -59,9 +65,10 @@ export default class Loading extends Component {
     const svg = svgSources[selectedType];
     const style = {
       fill: color,
-      height,
-      width,
+      height: formatStyleProp(height),
+      width: formatStyleProp(width),
     };
+
 
     return (
       <div
