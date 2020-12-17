@@ -59,9 +59,10 @@ export default class Loading extends Component {
     const svg = svgSources[selectedType];
     const style = {
       fill: color,
-      height,
-      width,
+      height: Number(height) || height,
+      width: Number(width) || width,
     };
+
 
     return (
       <div
